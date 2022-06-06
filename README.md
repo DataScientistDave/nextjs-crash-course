@@ -1,7 +1,7 @@
 # NextJS Crash Course 
 Completed NextJS Crash Course by Laith Academy
 
-# NextJS vs React
+## NextJS vs React
 - With SPAs instead of making a request to the server every time a user visited a new page your application would load all HTML, CSS, JavaScript on the inital request.
 - So subsequent route transitions would happen on the client giving the app a more native like feel.
 - SPAs have large bundle sizes
