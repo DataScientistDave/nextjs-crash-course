@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
+import Default from "../../layouts/Default";
 
 function Cat() {
   const [cat, setCat] = useState(null);
@@ -17,15 +18,17 @@ function Cat() {
 
   return (
     <div>
-      {cat && (
-        <div className="container mt-5" style={{ display: "flex" }}>
-          <img src={cat.image.url} />
-          <div className="mx-5">
-            <h1>{cat.name}</h1>
-            <p>{cat.description} </p>
+      <Default>
+        {cat && (
+          <div className="container mt-5" style={{ display: "flex" }}>
+            <img src={cat.image.url} />
+            <div className="mx-5">
+              <h1>{cat.name}</h1>
+              <p>{cat.description} </p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </Default>
     </div>
   );
 }

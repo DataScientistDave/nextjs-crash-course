@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../../components/Nav/Nav";
 import Card from "../../components/Card/Card";
+import Default from "../../layouts/Default";
 
 function index() {
   const [cats, setCats] = useState([]);
@@ -16,21 +17,22 @@ function index() {
 
   return (
     <>
-      <Nav />
-      <div className="container mt-5">
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {cats.map((cat) => (
-            <Card
-              key={cat.id}
-              name={cat.name}
-              id={cat.id}
-              phone={cat.phone}
-              email={cat.email}
-              image={cat.image}
-            />
-          ))}
+      <Default>
+        <div className="container mt-5">
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {cats.map((cat) => (
+              <Card
+                key={cat.id}
+                name={cat.name}
+                id={cat.id}
+                phone={cat.phone}
+                email={cat.email}
+                image={cat.image}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </Default>
     </>
   );
 }
